@@ -286,13 +286,13 @@ object projects:
     project          = "scodec-bits",
     sbtTestCommand   = "coreJVM/test",
     sbtPublishCommand = "coreJVM/publishLocal",
-    dependencies = List(scalatest, scalacheck, scalatestplusScalacheck)
+    dependencies = List(munit, scalacheck)
   )
 
   lazy val scodec = SbtCommunityProject(
     project          = "scodec",
     sbtTestCommand   = "unitTests/test",
-    dependencies = List(scalatest, scalacheck, scalatestplusScalacheck, scodecBits)
+    dependencies = List(munit, scalacheck, scodecBits)
   )
 
   lazy val scalaParserCombinators = SbtCommunityProject(
